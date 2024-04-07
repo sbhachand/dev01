@@ -126,7 +126,7 @@
 									"userProperties": [],
 									"typeProperties": {
 										"expression": {
-											"value": "\r\n@less(\r\nactivity('Get Metadata_for_size_of_file').output.size,2048\r\n)",
+											"value": "\n@less(\nactivity('Get Metadata_for_size_of_file').output.size,2048\n)",
 											"type": "Expression"
 										},
 										"ifTrueActivities": [
@@ -148,7 +148,7 @@
 														"type": "DatasetReference",
 														"parameters": {
 															"pfile_name": {
-																"value": "get().name",
+																"value": "@item().name",
 																"type": "Expression"
 															}
 														}
