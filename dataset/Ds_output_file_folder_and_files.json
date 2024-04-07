@@ -1,0 +1,26 @@
+{
+	"name": "Ds_output_file_folder_and_files",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_file_list",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat(\n'output_files/',\nformatDateTime(utcNow(),'YYYY'),'/',\nformatDateTime(utcNow(),'MM'),'/',\nformatDateTime(utcNow(),'DD'),'/'\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "datafile"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": []
+	}
+}
