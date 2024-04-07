@@ -101,7 +101,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "\n@less(\nactivity('Get Metadata_for_size_of_file').output.size,2048\n)",
+									"value": "@less(\r\nactivity('Get Metadata_for_size_of_file').output.size,2048)",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
@@ -119,7 +119,7 @@
 										"userProperties": [],
 										"typeProperties": {
 											"dataset": {
-												"referenceName": "ds_for_file_name_to_delete",
+												"referenceName": "ds_for_size_of_list_of_file",
 												"type": "DatasetReference",
 												"parameters": {
 													"pfile_name": {
