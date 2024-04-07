@@ -1,0 +1,23 @@
+{
+	"name": "ds_for_file_name_to_delete",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_file_list",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pfile_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "input",
+				"fileSystem": "datafile"
+			}
+		}
+	}
+}
