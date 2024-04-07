@@ -126,7 +126,7 @@
 									"userProperties": [],
 									"typeProperties": {
 										"expression": {
-											"value": "\n@less(\nactivity('Get Metadata_for_size_of_file').output.size,2048\n)",
+											"value": "@less(\r\nactivity('Get Metadata_for_size_of_file').output.size,2048)",
 											"type": "Expression"
 										},
 										"ifTrueActivities": [
@@ -144,7 +144,7 @@
 												"userProperties": [],
 												"typeProperties": {
 													"dataset": {
-														"referenceName": "ds_for_file_name_to_delete",
+														"referenceName": "ds_for_size_of_list_of_file",
 														"type": "DatasetReference",
 														"parameters": {
 															"pfile_name": {
@@ -183,7 +183,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_list_of_files')]",
 				"[concat(variables('factoryId'), '/datasets/ds_for_size_of_list_of_file')]",
-				"[concat(variables('factoryId'), '/datasets/ds_for_file_name_to_delete')]",
 				"[concat(variables('factoryId'), '/linkedServices/ls_source_file_list')]"
 			]
 		},
