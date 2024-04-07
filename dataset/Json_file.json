@@ -1,0 +1,32 @@
+{
+	"name": "Json_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_file_list",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "input",
+				"fileSystem": "datafile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"DepartmentNO": {
+					"type": "integer"
+				},
+				"DNAME": {
+					"type": "string"
+				},
+				"LOC": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
