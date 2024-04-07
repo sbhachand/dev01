@@ -71,7 +71,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "get().name",
+								"value": "@activity('Get Metadata_for_list_of_files').output.childItems",
 								"type": "Expression"
 							},
 							"isSequential": true,
